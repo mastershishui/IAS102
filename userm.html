@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>User Management</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+<!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<!-- All JS logic moved here -->
+<script src="firebase-config.js"></script>
+
+
+
+
+<body class="user-management-page">
+
+<header class="um-header header-with-logout">
+    <h1>USER MANAGEMENT</h1>
+    <!-- LOGOUT BUTTON -->
+    <button id="logoutBtn" class="logout-btn">LOGOUT</button>
+</header>
+
+<div class="um-divider"></div>
+
+<div class="um-container">
+    <!-- LEFT MENU -->
+    <div class="um-menu">
+        <div class="um-item"><span class="um-arrow"></span><button id="addUserBtn" class="um-btn">ADD USER</button></div>
+        <div class="um-item"><span class="um-arrow"></span><button id="editEmployeesBtn" class="um-btn">EDIT EMPLOYEES INFO</button></div>
+        <div class="um-item"><span class="um-arrow"></span><button id="resetPasswordBtn" class="um-btn">RESET PASSWORD</button></div>
+        <div class="um-item"><span class="um-arrow"></span><button id="activateAccountsBtn" class="um-btn">ACTIVATE/DE-ACTIVATE ACCOUNTS</button></div>
+        <div class="um-item"><span class="um-arrow"></span><button id="unlockUsersBtn" class="um-btn">UNLOCK LOCKED USERS</button></div>
+        <div class="um-item"><span class="um-arrow"></span><button id="viewLockedBtn" class="um-btn">VIEW LOCKED ACCOUNTS</button></div>
+    </div>
+
+    <!-- RIGHT CONTENT PANEL -->
+    <div id="um-content" class="um-content-box">
+        <h2 class="um-section-title">Select an action from the left</h2>
+    </div>
+</div>
+<div class="emp-footer fixed-footer">
+    <button class="emp-footer-btn" id="btnAdd">ADD</button>
+    <button class="emp-footer-btn" id="btnEdit">EDIT</button>
+    <button class="emp-footer-btn" id="btnView">VIEW</button>
+</div>
+
+</body>
+</html>
